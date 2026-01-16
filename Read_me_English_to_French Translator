@@ -1,0 +1,52 @@
+# 🌍 English to French Translator (Statistical Machine Translation)
+
+## Problem
+Building language translation systems helps understand how machines learn relationships between languages.  
+The goal of this project is to **translate English sentences into French** using a **Statistical Machine Translation (SMT)** approach instead of modern neural models, to demonstrate strong NLP fundamentals.
+
+This project focuses on:
+- Word alignment
+- Probabilistic translation
+- Classical NLP techniques
+
+---
+
+## Architecture (SMT Pipeline)
+
+1. **Parallel Corpus Loading**
+   - English–French aligned sentence pairs loaded from NLTK `comtrans`
+   - Parallel corpus used for word-level alignment
+
+2. **Model Training**
+   - Trained **IBM Model 1**
+   - Learns word-to-word translation probabilities
+   - Uses Expectation-Maximization (EM) algorithm
+
+3. **Translation Logic**
+   - Input English sentence is tokenized
+   - Each word translated using highest-probability mapping
+   - Unknown words handled gracefully
+
+4. **User Interface**
+   - Gradio web interface
+   - Real-time English → French translation
+   - Public shareable link for demos
+
+---
+
+## Tech Stack
+Python | NLTK | IBM Model 1 | Statistical Machine Translation | NLP | Gradio
+
+---
+
+## Key Learnings
+- Understanding of classical NLP and SMT models
+- Probabilistic word alignment
+- Difference between SMT and Neural Machine Translation
+- End-to-end NLP pipeline with UI deployment
+
+---
+
+## How to Run
+```bash
+pip install nltk gradio
